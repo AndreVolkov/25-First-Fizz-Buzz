@@ -2,22 +2,23 @@
 
 def FizzBuzz(n):
     if n % 3 == 0 and n % 5 == 0:
-        print('Fizz Buzz', end='=')
+        s = 'Fizz Buzz'
+        
     elif n % 3 == 0:
-        print('Fizz')
+        s = 'Fizz'
     elif n % 5 == 0:
-        print('Buzz')
+        s = 'Buzz'
     else:
-        print(n)
-    return FizzBuzz
+        s = n
+    return s
+
 
 i = 1
 k = 0
 while k != 25:
-    if i % 3 == 0 and i % 5 == 0:
+    s = FizzBuzz(i)
+    if s == 'Fizz Buzz':
         k = k + 1
-        print(k, end='. ')
-        FizzBuzz(i)
-        print(i)
+        print(k, s,'=', i)
+        
     i = i + 1
-
